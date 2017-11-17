@@ -22,6 +22,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="CreateCode.py" />
+    <Compile Include="example1.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="testCreateCode.py">
       <SubType>Code</SubType>
     </Compile>

@@ -18,4 +18,7 @@ def readAndCopyMyself(myname):
     is given a string, myname, and reads myname.py line by line and outputs it as a string, via yield.
 
     '''
+    #with open(myname, encoding='utf-8') as a_file:
+    #    for a_line in a_file:
+    #        yield a_line
     pass

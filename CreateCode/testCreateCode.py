@@ -16,8 +16,18 @@ class CopiesItself(unittest.TestCase):
     Test case for CreateCode
     '''
     
-    known_values = (copyExample.py)
+    known_values = (('example1.py',["print('My Name is example 1')",
+                                    "print('Today is Tuesday November 3rd, 1972.')",
+                                    "print('Do not buy my famous cakes!')",
+                                    "print('Thank you')"]))
     
     def test_readAndCopyMyself(self):
         '''given a py filename, it should output the contents line by line.'''
+        for inputfile, filecontents in self.known_values:
+            result = tuple(CreateCode.readAndCopyMyself(inputfile)) # Output a list of the contents of an iterator with the file contents
+            print('filecontents={},\nresult={}'.format(filecontents,result))
+            self.assertEqual(filecontents, result)
+
+if __name__ == '__main__':
+    unittest.main()
 
